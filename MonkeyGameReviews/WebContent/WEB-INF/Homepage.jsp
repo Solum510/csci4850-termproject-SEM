@@ -14,7 +14,7 @@
 			padding:0px;
 		}
 		.nav-button{
-			height:100%
+			height:100%;
 			display:table-cell;
 			text-align:right;
 			vertical-align:middle;
@@ -27,7 +27,12 @@
 <body>	
 	<nav class="appbar">
 		<h1 style="color:#ffffff; margin:10px;">Monkey Game Reviews - ${requestScope["pageTitle"]}</h1>
-		
+		<div class=nav-button>
+			<button onclick="" style="height:50px;">Create Entry</button>
+			<button onclick="" style="height:50px;">Home</button>
+			<button onclick="" style="height:50px;">User Profile</button>
+			<button onclick="" style="height:50px;">Logout</button>
+		</div>
 	</nav>
 </body>
 </html>
