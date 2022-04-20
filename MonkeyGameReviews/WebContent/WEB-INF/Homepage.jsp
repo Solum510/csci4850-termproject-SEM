@@ -21,7 +21,7 @@
 			padding-right:20px;
 		}
 		.search{
-			border-right-style:solid;
+			border-left-style:solid;
 			border-width: 3px;
 			border-color:#000000;
 			padding-right:5px;
@@ -61,7 +61,6 @@
 	</nav><br><br><br><br>
 		<div class="div-table" align=center>
 		<div class="div-table-col" align=left>
-		<div class="search">
 		<p style="color:black;">Current Search: ${requestScope["search"]}</p><div><div></div></div>
 		<form>
 			<label for="gameName">Game Title:</label><br>
@@ -95,9 +94,10 @@
 			<input type="reset" value="reset">
 		</form>
 	</div>
-	</div>
 	<div class="div-table-col">
+		<div class="search">
 		<h1>Search results:</h1>
+		</div>
 	</div>
 	</div>
 </body>
