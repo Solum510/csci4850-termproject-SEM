@@ -40,10 +40,10 @@
 	<nav class="appbar">
 		<h1 style="color:#ffffff; margin:10px;">Monkey Game Reviews - ${requestScope["pageTitle"]}</h1>
 		<div class=nav-button>
-			<button onclick="" style="height:50px;">Home</button>
-			<button onclick="" style="height:50px;">Create Entry</button>
+			<button onclick="window.location.href='Homepage'" style="height:50px;">Home</button>
+			<button onclick="window.location.href='CreateReview'" style="height:50px;">Create Entry</button>
 			<button onclick="" style="height:50px;">User Profile</button>
-			<button onclick="" style="height:50px;">Logout</button>
+			<button onclick="window.location.href='Login'" style="height:50px;">Logout</button>
 		</div>
 	</nav><br><br><br><br><br><br>
 		<div align=center>
