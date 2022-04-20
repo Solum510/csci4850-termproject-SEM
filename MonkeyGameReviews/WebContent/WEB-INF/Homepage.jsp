@@ -1,11 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC>
 <html>
 <head>
 	<style>
 		.appbar {
-			background:#00004e
+			background:#00a36a;
 			display:table;
 			height:90px;
 			width:100%;
@@ -24,9 +22,12 @@
 		}
 	</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Monkey Game Reviews</title>
 </head>
 <body>	
-
+	<nav class="appbar">
+		<h1 style="color:#ffffff; margin:10px;">Monkey Game Reviews - ${requestScope["pageTitle"]}</h1>
+		
+	</nav>
 </body>
 </html>
