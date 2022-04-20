@@ -62,7 +62,7 @@
 		<div class="div-table" align=center>
 		<div class="div-table-col" align=left>
 		<div class="search">
-		<p style="color:black;">Current Search: </p><div><div></div></div>
+		<p style="color:black;">Current Search: ${requestScope["search"]}</p><div><div></div></div>
 		<form>
 			<label for="gameName">Game Title:</label><br>
 			<input type="text" id="gameName" name="gameName"><div><div></div></div>

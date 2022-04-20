@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Homepage
+ * Servlet implementation class CreateReview
  */
-@WebServlet("/Homepage")
-public class Homepage extends HttpServlet {
+@WebServlet("/CreateReview")
+public class CreateReview extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Homepage() {
+    public CreateReview() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,9 +29,8 @@ public class Homepage extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.setAttribute("pageTitle", "Home");
-		request.setAttribute("search", "nothing");
-		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/Homepage.jsp");
+		request.setAttribute("pageTitle", "Create Review");
+		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/CreateReview.jsp");
 		view.forward(request, response);
 	}
 
