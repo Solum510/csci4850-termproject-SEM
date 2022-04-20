@@ -33,7 +33,7 @@
 		}
 	</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Monkey Game Reviews</title>
+<title>Monkey Game Reviews - Create Review</title>
 </head>
 <body>	
     

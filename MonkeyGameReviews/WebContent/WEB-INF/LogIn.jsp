@@ -1,13 +1,13 @@
 <!DOCTYPE html PUBLIC>
 <html>
 <head>
-    <title>Login Page</title>
+    <title>Monkey Game Reviews - Login</title>
     <link rel="stylesheet" type = "text/css" href = "css/style.css">
 </head>
 <body>	
     <h2>Login Page</h2><br>
 	<nav class="login">
-    <form id = "login" method = "get" action = "login.php">
+    <form id = "login" method = "get" action = "Login.java">
         <label><b>User Name     
         </b>    
         </label>    
