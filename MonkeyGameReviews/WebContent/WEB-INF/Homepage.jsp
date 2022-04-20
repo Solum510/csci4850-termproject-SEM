@@ -38,13 +38,21 @@
   	display: table-row;
  	 width: auto;
   	clear: both;
-	}
+  	}
+  	
 	.div-table-col {
  	 float: left; /* fix for  buggy browsers */
  	 display: table-column;         
  	 width: auto;  
  	 padding-right:5px;       
 	}
+	.write {
+		text-align:left;
+	}
+	.entry{
+	width: auto;
+	border: 3px groove #00a36a;
+}
 	</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Monkey Game Reviews</title>
@@ -91,12 +99,39 @@
 			<div class="grid"><input type="radio" id="5star" name="5star" value="5">
 			<label for="5star">5 stars</label></div><div><div></div></div>
 			<input type="submit" value="Submit">
-			<input type="reset" value="reset">
+			<input type="reset" value="Reset">
 		</form>
 	</div>
 	<div class="div-table-col">
 		<div class="search">
 		<h1>Search results:</h1>
+		<div class="entry">
+		<div class="div-table-row">
+			<img alt="game" src="stock-vector-game-controller-gamepad-vector-icon.jpg" width=15% height=15% align=left>
+			<p class="write" style="font-weight: bold;">Game Title</p>
+			<p class="write">Genres: all of em</p>
+			<p class="write">Rating: 5</p>
+			<p class="write">Review:</p>
+			<p class="write">blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
+		</div></div><br>
+		<div class="entry">
+		<div class="div-table-row">
+			<img alt="game" src="stock-vector-game-controller-gamepad-vector-icon.jpg" width=15% height=15% align=left>
+			<p class="write" style="font-weight: bold;">Game Title</p>
+			<p class="write">Genres: all of em</p>
+			<p class="write">Rating: 5</p>
+			<p class="write">Review:</p>
+			<p class="write">blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
+		</div></div><br>
+		<div class="entry">
+		<div class="div-table-row">
+			<img alt="game" src="stock-vector-game-controller-gamepad-vector-icon.jpg" width=15% height=15% align=left>
+			<p class="write" style="font-weight: bold;">Game Title</p>
+			<p class="write">Genres: all of em</p>
+			<p class="write">Rating: 5</p>
+			<p class="write">Review:</p>
+			<p class="write">blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
+		</div></div><br>
 		</div>
 	</div>
 	</div>
