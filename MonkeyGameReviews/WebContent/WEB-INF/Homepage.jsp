@@ -91,6 +91,8 @@
 			<label for="4star">4 stars</label></div>
 			<div class="grid"><input type="radio" id="5star" name="5star" value="5">
 			<label for="5star">5 stars</label></div><div><div></div></div>
+			<input type="submit" value="Submit">
+			<input type="reset" value="reset">
 		</form>
 	</div>
 	</div>
