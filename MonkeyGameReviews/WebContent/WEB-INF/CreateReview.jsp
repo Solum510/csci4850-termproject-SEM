@@ -46,7 +46,7 @@
 		</div>
 	</nav><br><br><br><br><br><br>
 		<div align=center>
-	   <form>
+	   <form method=post>
 	       <label for="gameName">Game Title:</label><br>
 			<input type="text" id="gameName" name="gameName"><br><br>
 			<label for="gameName">Genres:</label><br>
@@ -79,5 +79,6 @@
 			<input type="submit" value="Create Review">
 	   </form>
 	   </div>
+	   <!--<p>${requestScope["review"]}</p>-->
 </body>
 </html>

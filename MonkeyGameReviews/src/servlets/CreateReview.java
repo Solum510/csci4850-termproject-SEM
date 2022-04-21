@@ -30,6 +30,7 @@ public class CreateReview extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		request.setAttribute("pageTitle", "Create Review");
+		
 		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/CreateReview.jsp");
 		view.forward(request, response);
 	}
@@ -39,6 +40,8 @@ public class CreateReview extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		//String review = request.getParameter("review");
+		//request.setAttribute("review", review);
 		doGet(request, response);
 	}
 

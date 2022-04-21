@@ -32,7 +32,7 @@
 		.div-table {
   	display: table;         
   	width: auto;         
-  	border-spacing: 5px; /* cellspacing:poor IE support for  this */
+  	/*border-spacing: 5px; /* cellspacing:poor IE support for  this */
 	}
 	.div-table-row {
   	display: table-row;
@@ -43,8 +43,8 @@
 	.div-table-col {
  	 float: left; /* fix for  buggy browsers */
  	 display: table-column;         
- 	 width: auto;  
- 	 padding-right:5px;       
+ 	 width: auto;
+ 	 padding-right:5px;  
 	}
 	.write {
 		text-align:left;
@@ -52,6 +52,7 @@
 	.entry{
 	width: auto;
 	border: 3px groove #00a36a;
+	box-shadow:0px 5px 3px #aaaaaa;
 }
 	</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -66,8 +67,8 @@
 			<button onclick="window.location.href='UserProfile'" style="height:50px;">User Profile</button>
 		</div>
 	</nav><br><br><br><br>
-		<div class="div-table" align=center>
-		<div class="div-table-col" align=left>
+		<div class="div-table">
+		<div class="div-table-col" align=left style="background:#05753b; margin-left:-8; box-shadow:0px 5px 3px #aaaaaa;">
 		<p style="color:black;">Current Search: ${requestScope["search"]}</p><br><br>
 		<form>
 			<label for="gameName">Game Title:</label><br>
@@ -107,12 +108,12 @@
 		<div class="entry">
 		<div class="div-table-row">
 			<img alt="game" src="stock-vector-game-controller-gamepad-vector-icon.jpg" width=15% height=15% align=left>
-			<p class="write" style="font-weight: bold;">Game Title</p>
-			<p class="write">Genres: all of em</p>
-			<p class="write">Review by: user</p>
-			<p class="write">Rating: 5</p>
+			<p class="write" style="font-weight: bold;">Realm of the Mad God Exalt</p>
+			<p class="write">Genres: Role-Playing</p>
+			<p class="write">Review by: user1</p>
+			<p class="write">Rating: 4</p>
 			<p class="write">Review:</p>
-			<p class="write">blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
+			<p class="write"> Would be a 5 but the server lag KILLS character that have had DAYS of work put into them.</p>
 		</div></div><br>
 		<div class="entry">
 		<div class="div-table-row">

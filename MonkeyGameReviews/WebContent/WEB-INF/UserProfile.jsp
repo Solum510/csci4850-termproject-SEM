@@ -53,6 +53,7 @@
 	.entry{
 	width: auto;
 	border: 3px groove #00a36a;
+	box-shadow:0px 5px 3px #aaaaaa;
 }
 	</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -66,11 +67,12 @@
 			<button onclick="window.location.href='CreateReview'" style="height:50px;">Create Entry</button>
 			<button onclick="window.location.href='UserProfile'" style="height:50px;">User Profile</button>
 		</div>
-	</nav><br><br><br><br><br>
+	</nav><br><br><br><br>
 	<div class="div-table" align=center>
-		<div class="div-table-col" align=left>
+		<div class="div-table-col" align=left style="background:#05753b; margin-left:-13; box-shadow:0px 5px 3px #aaaaaa;">
+			<br>
 			<div class="grid">
-				<img src="profile-circle.png" width=69px height=69px align=left>
+				<img src="profile-circle.png" width=72px height=72px align=left>
 			</div>
 			<p align=left>Username - wow</p>
 			<p align=left>Email - wowow</p>
