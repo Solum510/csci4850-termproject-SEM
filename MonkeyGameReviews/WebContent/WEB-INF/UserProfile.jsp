@@ -1,4 +1,5 @@
 <!DOCTYPE html PUBLIC>
+<!-- https://stackoverflow.com/questions/3053205/how-create-table-only-using-div-tag-and-css -->
 <html>
 <head>
 	<style>
@@ -64,7 +65,6 @@
 			<button onclick="window.location.href='Homepage'" style="height:50px;">Home</button>
 			<button onclick="window.location.href='CreateReview'" style="height:50px;">Create Entry</button>
 			<button onclick="window.location.href='UserProfile'" style="height:50px;">User Profile</button>
-			<button onclick="window.location.href='Login'" style="height:50px;">Logout</button>
 		</div>
 	</nav><br><br><br><br><br>
 	<div class="div-table" align=center>
@@ -74,7 +74,9 @@
 			</div>
 			<p align=left>Username - wow</p>
 			<p align=left>Email - wowow</p>
-			
+			<form method="post">
+				<input type="submit" value="logout">
+			</form>
 		</div>
 		<div class="grid">
 		<div class="div-table-col">
