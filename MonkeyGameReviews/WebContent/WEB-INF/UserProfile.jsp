@@ -57,7 +57,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Monkey Game Reviews</title>
 </head>
-<body>	
+<body>
 	<nav class="appbar">
 		<h1 style="color:#ffffff; margin:10px;">Monkey Game Reviews - ${requestScope["pageTitle"]}</h1>
 		<div class=nav-button>
@@ -66,46 +66,21 @@
 			<button onclick="window.location.href='UserProfile'" style="height:50px;">User Profile</button>
 			<button onclick="window.location.href='Login'" style="height:50px;">Logout</button>
 		</div>
-	</nav><br><br><br><br>
-		<div class="div-table" align=center>
+	</nav><br><br><br><br><br>
+	<div class="div-table" align=center>
 		<div class="div-table-col" align=left>
-		<p style="color:black;">Current Search: ${requestScope["search"]}</p><br><br>
-		<form>
-			<label for="gameName">Game Title:</label><br>
-			<input type="text" id="gameName" name="gameName"><br><br>
-			<label for="gameName">Genres:</label><br>
-			<div class="grid"><input type="checkbox" id="genre1" name="genre1" value="Action">
-			<label for="genre1">Action</label>
+			<div class="grid">
+				<img src="profile-circle.png" width=69px height=69px align=left>
 			</div>
-			<div class="grid"><input type="checkbox" id="genre2" name="genre2" value="Role-Playing">
-			<label for="genre2">Role-Playing</label></div>
-			<div class="grid"><input type="checkbox" id="genre3" name="genre3" value="Strategy">
-			<label for="genre3">Strategy</label></div><br>
-			<div class="grid"><input type="checkbox" id="genre4" name="genre4" value="Adventure & Casual">
-			<label for="genre4">Adventure & Casual</label></div>
-			<div class="grid"><input type="checkbox" id="genre5" name="genre5" value="Simulation">
-			<label for="genre5">Simulation</label></div><br>
-			<div class="grid"><input type="checkbox" id="genre6" name="genre6" value="Sports & Racing">
-			<label for="genre6">Sports & Racing</label></div><br><br>
-			<p>Rating:</p>
-			<div class="grid"><input type="radio" id="1star" name="rad" value="1">
-			<label for="1star">1 star</label></div>
-			<div class="grid"><input type="radio" id="2star" name="rad" value="2">
-			<label for="2star">2 stars</label></div>
-			<div class="grid"><input type="radio" id="3star" name="rad" value="3">
-			<label for="3star">3 stars</label></div><br>
-			<div class="grid"><input type="radio" id="4star" name="rad" value="4">
-			<label for="4star">4 stars</label></div>
-			<div class="grid"><input type="radio" id="5star" name="rad" value="5">
-			<label for="5star">5 stars</label></div><br><br>
-			<input type="submit" value="Submit">
-			<input type="reset" value="Reset">
-		</form>
-	</div>
-	<div class="div-table-col">
+			<p align=left>Username - wow</p>
+			<p align=left>Email - wowow</p>
+			
+		</div>
+		<div class="grid">
+		<div class="div-table-col">
 		<div class="search">
-		<h1>Search results:</h1>
-		<div class="entry">
+			<h1>User reviews:</h1>
+			<div class="entry">
 		<div class="div-table-row">
 			<img alt="game" src="stock-vector-game-controller-gamepad-vector-icon.jpg" width=15% height=15% align=left>
 			<p class="write" style="font-weight: bold;">Game Title</p>
@@ -135,6 +110,7 @@
 			<p class="write">Review:</p>
 			<p class="write">blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
 		</div></div><br>
+		</div>
 		</div>
 	</div>
 	</div>

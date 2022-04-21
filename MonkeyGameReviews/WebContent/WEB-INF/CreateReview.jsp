@@ -42,7 +42,7 @@
 		<div class=nav-button>
 			<button onclick="window.location.href='Homepage'" style="height:50px;">Home</button>
 			<button onclick="window.location.href='CreateReview'" style="height:50px;">Create Entry</button>
-			<button onclick="" style="height:50px;">User Profile</button>
+			<button onclick="window.location.href='UserProfile'" style="height:50px;">User Profile</button>
 			<button onclick="window.location.href='Login'" style="height:50px;">Logout</button>
 		</div>
 	</nav><br><br><br><br><br><br>
