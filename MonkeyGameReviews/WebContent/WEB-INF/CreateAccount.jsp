@@ -33,6 +33,13 @@ label{
     padding-left: 8px;  
       
 }  
+#email{
+	 width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}
 #log{  
     width: 300px;  
     height: 30px;  
@@ -61,31 +68,32 @@ span{
 		}
 	</style>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Monkey Game Reviews - Login</title>
+    <title>Monkey Game Reviews - Create an Account</title>
 </head>
 <body>	
 	<div class="appbar">
 	<div align=center><h1 style="color:#ffffff;">Monkey Game Reviews</h1></div></div><br><br>
 	<br><br>
 	<div>
-    <h2 style="text-align:center">Log in to Monkey Game Reviews</h2><br>
+    <h2 style="text-align:center">Create an Account for Monkey Game Reviews</h2><br>
 	<nav class="login">
 	<div align=center>
-    <form id = "login" method = "get" action = "Login.java">
+    <form id = "login" method = "post" action = "CreateAccount.java">
         <label for="Uname"><b>User Name     
         </b>    
         </label>    
         <input type="text" name="Uname" id="Uname" placeholder="Username">    
-        <br><br>    
+        <br><br>   
+        <label for="email"><b>Email</b></label><br>
+        <input type="text" name="email" id="email" placeholder="Email"><br><br> 
         <label for="Pass"><b>Password     
         </b>    
         </label> <br>   
         <input type="Password" name="Pass" id="Pass" placeholder="Password">    
         <br><br>    
-        <input type="submit" name="log" id="log" value="Log In">       
+        <input type="submit" name="log" id="log" value="Create Account">       
         <br><br>       
     </form>
-    	<p style="color:#08ffd1">Not a user? <a href="CreateAccount">Create an account</a></p>
     </div>
 	</nav>
 	</div>
