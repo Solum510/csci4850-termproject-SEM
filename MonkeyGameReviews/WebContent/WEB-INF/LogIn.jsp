@@ -1,30 +1,93 @@
 <!DOCTYPE html PUBLIC>
 <html>
 <head>
+	<style>
+ 
+.login{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+        background: #23463f;  
+        border-radius: 15px ;  
+          
+}  
+ 
+label{  
+    color: #08ffd1;  
+    font-size: 17px;  
+}  
+#Uname{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+#Pass{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}  
+#log{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: blue;  
+  
+  
+}  
+span{  
+    color: white;  
+    font-size: 17px;  
+}  
+
+.appbar {
+			background:#00a36a;
+			display:table;
+			height:90px;
+			width:100%;
+			position:absolute;
+			top:0;
+			left:0;
+			box-shadow:0px 5px 3px #aaaaaa;
+			padding:0px;
+		}
+	</style>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Monkey Game Reviews - Login</title>
-    <link rel="stylesheet" type = "text/css" href = "css/style.css">
 </head>
 <body>	
-    <h2>Log in to Monkey Game Reviews</h2><br>
+	<div class="appbar">
+	<div align=center><h1 style="color:#ffffff;">Monkey Game Reviews</h1></div></div><br><br>
+	<br><br>
+	<div>
+    <h2 style="text-align:center">Log in to Monkey Game Reviews</h2><br>
 	<nav class="login">
+	<div align=center>
     <form id = "login" method = "get" action = "Login.java">
-        <label><b>User Name     
+        <label for="Uname"><b>User Name     
         </b>    
         </label>    
         <input type="text" name="Uname" id="Uname" placeholder="Username">    
         <br><br>    
-        <label><b>Password     
+        <label for="Pass"><b>Password     
         </b>    
-        </label>    
+        </label> <br>   
         <input type="Password" name="Pass" id="Pass" placeholder="Password">    
         <br><br>    
-        <input type="button" name="log" id="log" value="Log In Here">       
-        <br><br>    
-        <input type="checkbox" id="check">    
-        <span>Remember me</span>    
-        <br><br>    
-        Forgot <a href="#">Password</a>   
+        <input type="submit" name="log" id="log" value="Log In">       
+        <br><br>       
     </form>
+    	<p style="color:#08ffd1">Not a user? <a href="#">Create an account</a></p>
+    </div>
 	</nav>
+	</div>
 </body>
 </html>
