@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import datamodels.User;
+
 /**
  * Servlet implementation class UserProfile
  */
@@ -30,7 +32,11 @@ public class UserProfile extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setAttribute("pageTitle", "User Profile");
+		HttpSession session = request.getSession();
+		User user = (User) session.getAttribute("user");
+		request.setAttribute("username", user.getUsername());
 		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/UserProfile.jsp");
+		
 		view.forward(request, response);
 	}
 

@@ -74,7 +74,7 @@
 			<div class="grid">
 				<img src="profile-circle.png" width=72px height=72px align=left>
 			</div>
-			<p align=left>Username - wow</p>
+			<p align=left>Username - ${requestScope["username"]}</p>
 			<form method="post">
 				<input type="submit" value="logout">
 			</form>
@@ -82,7 +82,7 @@
 		<div class="grid">
 		<div class="div-table-col">
 		<div class="search">
-			<h1>User reviews:</h1>
+			<h1>${requestScope["username"]}'s reviews:</h1>
 			<div class="entry">
 		<div class="div-table-row">
 			<img alt="game" src="stock-vector-game-controller-gamepad-vector-icon.jpg" width=15% height=15% align=left>
