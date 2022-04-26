@@ -107,37 +107,7 @@
 	<div class="div-table-col">
 		<div class="search">
 		<h1>Search results:</h1>
-		<div class="entry">
-		<div class="div-table-row">
-			<img alt="game" src="stock-vector-game-controller-gamepad-vector-icon.jpg" width=15% height=15% align=left>
-			<p class="write" style="font-weight: bold;">Realm of the Mad God Exalt</p>
-			<p class="write">Genres: Role-Playing</p>
-			<p class="write">Review by: user1</p>
-			<p class="write">Rating: 4</p>
-			<p class="write">Review:</p>
-			<p class="write"> Would be a 5 but the server lag KILLS character that have had DAYS of work put into them.</p>
-		</div></div><br>
-		<div class="entry">
-		<div class="div-table-row">
-			<img alt="game" src="stock-vector-game-controller-gamepad-vector-icon.jpg" width=15% height=15% align=left>
-			<p class="write" style="font-weight: bold;">Game Title</p>
-			<p class="write">Genres: all of em</p>
-			<p class="write">Review by: user</p>
-			<p class="write">Rating: 5</p>
-			<p class="write">Review:</p>
-			<p class="write">blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-		</div></div><br>
-		<div class="entry">
-		<div class="div-table-row">
-			<img alt="game" src="stock-vector-game-controller-gamepad-vector-icon.jpg" width=15% height=15% align=left>
-			<p class="write" style="font-weight: bold;">Game Title</p>
-			<p class="write">Genres: all of em</p>
-			<p class="write">Review by: user</p>
-			<p class="write">Rating: 5</p>
-			<p class="write">Review:</p>
-			<p class="write">blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-		</div></div><br>
-		</div>
+			${requestScope["output"]}
 	</div>
 	</div>
 </body>

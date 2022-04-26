@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import datamodels.GameReview;
+import util.UtilDBGamereview;
+
 /**
  * Servlet implementation class Homepage
  */
@@ -52,6 +55,8 @@ public class Homepage extends HttpServlet {
 		String search = "<br>";
 		String score= request.getParameter("rad");
 		int scoreNum = -1; 
+		List<GameReview> reviews;
+		String output = "";
 		if(!(title.equals(""))) {
 			search += "  Game title: " + title + "<br>";
 		}
@@ -82,6 +87,9 @@ public class Homepage extends HttpServlet {
 			genreString += genre6 + ".";
 			search += "  Genre: " + genre6 + "<br>";
 		}
+		if(search.charAt(search.length() - 1) == '.') {
+			search = search.substring(0, search.length() - 1);
+		}
 		if(score != null) {
 			search += "  Score: " + score + "<br>";
 			scoreNum = Integer.parseInt(score);
@@ -91,6 +99,11 @@ public class Homepage extends HttpServlet {
 				//genre5 + "<br>" + genre6 + "<br>" + score;
 		
 		request.setAttribute("search", search);
+		reviews = UtilDBGamereview.listEntries(title, author, genreString, scoreNum);
+		for(int i = 0; i < reviews.size(); i++) {
+			output += reviews.get(i).toHtml();
+		}
+		request.setAttribute("output", output);
 		doGet(request, response);
 	}
 

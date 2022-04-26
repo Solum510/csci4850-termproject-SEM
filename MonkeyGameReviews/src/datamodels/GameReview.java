@@ -109,4 +109,19 @@ public class GameReview {
 	public String getBody() {
 		return this.body;
 	}
+	
+	public String toHtml() {
+		String result = "<div class=\"entry\">" + 
+				"		<div class=\"div-table-row\">" + 
+				"			<img alt=\"game\" src=\"stock-vector-game-controller-gamepad-vector-icon.jpg\" width=15% height=15% align=left>" + 
+				"			<p class=\"write\" style=\"font-weight: bold;\">" + this.title + "</p>" + 
+				"			<p class=\"write\">Genres: "+ this.genres + "</p>" + 
+				"			<p class=\"write\">Review by: "+ this.author + "</p>" + 
+				"			<p class=\"write\">Rating: " + this.score + "</p>" + 
+				"			<p class=\"write\">Review:</p>" + 
+				"			<p class=\"write\">" + this.body + "</p>" + 
+				"		</div></div><br>";
+		
+		return result;
+	}
 }
