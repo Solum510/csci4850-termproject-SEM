@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
 public class CreateReview extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private String redirect = "<p>You must be logged in to create a review. Please <a href=\"Login\">login.</a></p>";
-	private String norm = "<form method=post>\r\n" + 
+	private String norm = "<form action=CreateReview method=post>\r\n" + 
 			"	       <label for=\"gameName\">Game Title:</label><br>\r\n" + 
 			"			<input type=\"text\" id=\"gameName\" name=\"gameName\"><br><br>\r\n" + 
 			"			<label for=\"gameName\">Genres:</label><br>\r\n" + 
@@ -81,7 +81,8 @@ public class CreateReview extends HttpServlet {
 		// TODO Auto-generated method stub
 		//String review = request.getParameter("review");
 		//request.setAttribute("review", review);
-		doGet(request, response);
+		
+		//doGet(request, response);
 	}
 
 }

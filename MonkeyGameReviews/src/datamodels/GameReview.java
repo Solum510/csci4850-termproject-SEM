@@ -17,7 +17,7 @@ import javax.persistence.Table;
  * 	AUTHOR VARCHAR(100) NOT NULL,
  *  GENRES VARCHAR(100) NOT NULL,
  *  SCORE INT NOT NULL,
- *  BODY VARCHAR(100) NOT NULL,
+ *  BODY TEXT NOT NULL,
  *  PRIMARY KEY (id));
  *
  */
@@ -43,19 +43,19 @@ public class GameReview {
 	@Column(name = "BODY")
 	private String body;
 	
-	public GameReview(Integer id, String title, String author, List<String> genres, Integer score, String body) {
+	public GameReview(Integer id, String title, String author, String genres, Integer score, String body) {
 		this.id = id;
 		this.title = title;
 		this.author = author;
-		setGenres(genres);
+		this.genres = genres;
 		this.score = score;
 		this.body = body;
 	}
 	
-	public GameReview(String title, String author, List<String> genres, Integer score, String body) {
+	public GameReview(String title, String author, String genres, Integer score, String body) {
 			this.title = title;
 			this.author = author;
-			setGenres(genres);
+			this.genres = genres;
 			this.score = score;
 			this.body = body;
 	}
@@ -70,7 +70,10 @@ public class GameReview {
 		this.author = author;
 	}
 	
-	public void setGenres(List<String> genres) {
+	public void setGenres(String genres) {
+		this.genres = genres;
+	}
+	public void setGenresFromArray(List<String> genres) {
 		String result = "";
 		for(int i = 0; i < genres.size(); i++) {
 			result += genres.get(i);

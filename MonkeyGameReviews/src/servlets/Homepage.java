@@ -51,6 +51,7 @@ public class Homepage extends HttpServlet {
 		String genreString = "";  
 		String search = "<br>";
 		String score= request.getParameter("rad");
+		int scoreNum = -1; 
 		if(!(title.equals(""))) {
 			search += "  Game title: " + title + "<br>";
 		}
@@ -83,6 +84,7 @@ public class Homepage extends HttpServlet {
 		}
 		if(score != null) {
 			search += "  Score: " + score + "<br>";
+			scoreNum = Integer.parseInt(score);
 		}
 		//String search = title + "<br>" + author + "<br>" + genre1 + "<br>"
 			//	+ genre2 + "<br>" + genre3 + "<br>" + genre4 + "<br>" + 
