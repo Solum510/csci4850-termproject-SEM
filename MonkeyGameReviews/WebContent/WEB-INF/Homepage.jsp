@@ -68,7 +68,7 @@
 		</div>
 	</nav><br><br><br><br>
 		<div class="div-table">
-		<div class="div-table-col" align=left style="background:#05753b; margin-left:-8; box-shadow:0px 5px 3px #aaaaaa;">
+		<div class="div-table-col" align=left style="background:#23463f; margin-left:-8; box-shadow:0px 5px 3px #aaaaaa;">
 		<p style="color:black;">Current Search: ${requestScope["search"]}</p><br><br>
 		<form>
 			<label for="gameName">Game Title:</label><br>

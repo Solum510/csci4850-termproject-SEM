@@ -78,14 +78,12 @@ span{
     <h2 style="text-align:center">Create an Account for Monkey Game Reviews</h2><br>
 	<nav class="login">
 	<div align=center>
-    <form id = "login" method = "post" action = "CreateAccount.java">
+    <form id = "create" method = "post" action = "CreateAccount">
         <label for="Uname"><b>User Name     
         </b>    
         </label>    
         <input type="text" name="Uname" id="Uname" placeholder="Username">    
         <br><br>   
-        <label for="email"><b>Email</b></label><br>
-        <input type="text" name="email" id="email" placeholder="Email"><br><br> 
         <label for="Pass"><b>Password     
         </b>    
         </label> <br>   

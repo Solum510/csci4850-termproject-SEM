@@ -71,7 +71,7 @@ span{
     <h2 style="text-align:center">Log in to Monkey Game Reviews</h2><br>
 	<nav class="login">
 	<div align=center>
-    <form id = "login" method = "get" action = "Login.java">
+    <form id = "login" method = "post" action = "Login">
         <label for="Uname"><b>User Name     
         </b>    
         </label>    
@@ -88,6 +88,7 @@ span{
     	<p style="color:#08ffd1">Not a user? <a href="CreateAccount">Create an account</a></p>
     </div>
 	</nav>
+		${requestScope["error"]}
 	</div>
 </body>
 </html>

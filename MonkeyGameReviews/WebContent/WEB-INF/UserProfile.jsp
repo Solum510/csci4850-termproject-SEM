@@ -69,13 +69,12 @@
 		</div>
 	</nav><br><br><br><br>
 	<div class="div-table" align=center>
-		<div class="div-table-col" align=left style="background:#05753b; margin-left:-13; box-shadow:0px 5px 3px #aaaaaa;">
+		<div class="div-table-col" align=left style="background:#23463f; margin-left:-13; box-shadow:0px 5px 3px #aaaaaa;">
 			<br>
 			<div class="grid">
 				<img src="profile-circle.png" width=72px height=72px align=left>
 			</div>
 			<p align=left>Username - wow</p>
-			<p align=left>Email - wowow</p>
 			<form method="post">
 				<input type="submit" value="logout">
 			</form>
