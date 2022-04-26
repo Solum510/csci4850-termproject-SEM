@@ -59,7 +59,7 @@ public class UtilDBGamereview {
       return resultList;
    }
 
-   public static List<GameReview> listEntries(String keyword) {
+   public static List<GameReview> listEntries(String title, String author, String genres, int score) {
       List<GameReview> resultList = new ArrayList<GameReview>();
 
       Session session = getSessionFactory().openSession();
@@ -72,9 +72,9 @@ public class UtilDBGamereview {
          List<?> reviews = session.createQuery("FROM GameReview").list();
          for (Iterator<?> iterator = reviews.iterator(); iterator.hasNext();) {
             GameReview review = (GameReview) iterator.next();
-           /* if (employee.getSongName().startsWith(keyword)) {
-               resultList.add(review);
-            }*/
+           if(review.getTitle().equalsIgnoreCase(title) || review.getAuthor().equalsIgnoreCase(author) || review.getGenres().equalsIgnoreCase(genres) || review.getScore().intValue() == score) {
+        	   resultList.add(review);
+           }
          }
          tx.commit();
       } catch (HibernateException e) {
@@ -87,12 +87,12 @@ public class UtilDBGamereview {
       return resultList;
    }
 
-   public static void createEntries(String title, String genres, int score, String review) {
+   public static void createEntries(String title, String author, String[] genres, int score, String review) {
       Session session = getSessionFactory().openSession();
       Transaction tx = null;
       try {
          tx = session.beginTransaction();
-         session.save(new GameReview(title, genres, score, review));
+         session.save(new GameReview(title, author, genres, score, review));
          tx.commit();
       } catch (HibernateException e) {
          if (tx != null)

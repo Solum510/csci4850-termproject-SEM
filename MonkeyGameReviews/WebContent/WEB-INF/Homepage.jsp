@@ -73,6 +73,8 @@
 		<form>
 			<label for="gameName">Game Title:</label><br>
 			<input type="text" id="gameName" name="gameName"><br><br>
+			<label for="author">Author:</label><br>
+			<input type="text" id="author" name="author"><br><br>
 			<label for="gameName">Genres:</label><br>
 			<div class="grid"><input type="checkbox" id="genre1" name="genre1" value="Action">
 			<label for="genre1">Action</label>
