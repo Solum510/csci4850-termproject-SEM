@@ -44,6 +44,10 @@ public class User {
 		this.pass = pass;
 	}
 	
+	public User() {
+		
+	}
+	
 	public void setUsername(String user) {
 		this.username = user;
 	}

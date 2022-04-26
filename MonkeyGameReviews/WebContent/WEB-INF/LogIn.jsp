@@ -75,20 +75,22 @@ span{
         <label for="Uname"><b>User Name     
         </b>    
         </label>    
-        <input type="text" name="Uname" id="Uname" placeholder="Username">    
+        <input type="text" name="Uname" id="Uname" placeholder="Username" required>    
         <br><br>    
         <label for="Pass"><b>Password     
         </b>    
         </label> <br>   
-        <input type="Password" name="Pass" id="Pass" placeholder="Password">    
+        <input type="Password" name="Pass" id="Pass" placeholder="Password" required>    
         <br><br>    
         <input type="submit" name="log" id="log" value="Log In">       
         <br><br>       
     </form>
-    	<p style="color:#08ffd1">Not a user? <a href="CreateAccount">Create an account</a></p>
     </div>
 	</nav>
+		<div align=center>
+		    	<p>Not a user? <a href="CreateAccount">Create an account</a></p><br>
 		${requestScope["error"]}
+		</div>
 	</div>
 </body>
 </html>

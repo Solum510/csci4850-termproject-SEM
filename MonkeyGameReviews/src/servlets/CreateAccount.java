@@ -45,12 +45,18 @@ public class CreateAccount extends HttpServlet {
 		//doGet(request, response);
 		String username = request.getParameter("Uname");
 		String password = request.getParameter("Pass");
-		
-		UtilDBUser.createEntries(username, password);
-		User user = UtilDBUser.listEntries(username, password).get(0);
-		HttpSession session = request.getSession();
-		session.setAttribute("user", user);
-		response.sendRedirect("Homepage");
+		if(username != null &&  password != null && UtilDBUser.listEntries(username).size() > 0) {
+		    String error = "<p style=\"color:#ff0000;\">account already exists</p>";
+			request.setAttribute("error", error);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/CreateAccount.jsp");
+			dispatcher.forward(request, response);
+		} else {
+			UtilDBUser.createEntries(username, password);
+			User user = UtilDBUser.listEntries(username, password).get(0);
+			HttpSession session = request.getSession();
+			session.setAttribute("user", user);
+			response.sendRedirect("Homepage");
+		}
 		
 	}
 

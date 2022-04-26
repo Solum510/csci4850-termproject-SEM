@@ -85,6 +85,34 @@ public class UtilDBUser {
       }
       return resultList;
    }
+   
+   public static List<User> listEntries(String name) {
+	      List<User> resultList = new ArrayList<User>();
+
+	      Session session = getSessionFactory().openSession();
+	      Transaction tx = null;
+
+	      try {
+	         tx = session.beginTransaction();
+	         System.out.println((User)session.get(User.class, 1)); // use "get" to fetch data
+	        // Query q = session.createQuery("FROM Employee");
+	         List<?> users = session.createQuery("FROM User").list();
+	         for (Iterator<?> iterator = users.iterator(); iterator.hasNext();) {
+	            User user = (User) iterator.next();
+	            if (user.getUsername().equals(name)) {
+	               resultList.add(user);
+	            }
+	         }
+	         tx.commit();
+	      } catch (HibernateException e) {
+	         if (tx != null)
+	            tx.rollback();
+	         e.printStackTrace();
+	      } finally {
+	         session.close();
+	      }
+	      return resultList;
+	   }
 
    public static void createEntries(String name, String pass) {
       Session session = getSessionFactory().openSession();
