@@ -34,7 +34,9 @@ public class UserProfile extends HttpServlet {
 		request.setAttribute("pageTitle", "User Profile");
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("user");
-		request.setAttribute("username", user.getUsername());
+		if(user != null) {
+			request.setAttribute("username", user.getUsername());
+		}
 		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/UserProfile.jsp");
 		
 		view.forward(request, response);

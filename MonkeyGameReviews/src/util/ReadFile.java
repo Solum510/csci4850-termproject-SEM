@@ -1,24 +1,42 @@
 package util;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.Scanner;
 
+import javax.servlet.ServletContext;
+
 public class ReadFile {
-	static String filepath = "reviews.csv";
 	
-	public static void createReviews() {
-		Scanner scanOut = new Scanner(filepath);
-		//title,author,genres,score,review
-		while(scanOut.hasNextLine()) {
-			Scanner scanIn = new Scanner(scanOut.nextLine());
-			scanIn.useDelimiter(",");
-			String title = scanIn.next();
-			String author = scanIn.next();
-			String genres = scanIn.next();
-			int score = scanIn.nextInt();
-			String review = scanIn.next();
-			scanIn.close();
-			UtilDBGamereview.createEntries(title, author, genres, score, review);
+	public static void createReviews(ServletContext context, String filename) {
+		Scanner scanOut;
+		try {
+			InputStream is = context.getResourceAsStream(filename);
+			if(is != null) {
+			scanOut = new Scanner(is);
+			while(scanOut.hasNextLine()) {
+				Scanner scanIn = new Scanner(scanOut.nextLine());
+				scanIn.useDelimiter(",");
+				String title = scanIn.next();
+				//System.out.println(title);
+				String author = scanIn.next();
+				//System.out.println(author);
+				String genres = scanIn.next();
+				//System.out.println(genres);
+				Integer score = Integer.valueOf(scanIn.next());
+				//System.out.println(score);
+				String review = scanIn.next();
+				//System.out.println(review);
+				scanIn.close();
+				UtilDBGamereview.createEntries(title, author, genres, score, review);
+			}
+			scanOut.close();
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		scanOut.close();
+		//title,author,genres,score,review
 	}
 }

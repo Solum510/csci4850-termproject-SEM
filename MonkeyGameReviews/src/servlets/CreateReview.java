@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import util.ReadFile;
+
 /**
  * Servlet implementation class CreateReview
  */
@@ -81,7 +83,8 @@ public class CreateReview extends HttpServlet {
 		// TODO Auto-generated method stub
 		//String review = request.getParameter("review");
 		//request.setAttribute("review", review);
-		
+		//String filepath = "/WEB-INF/reviews.csv";
+		//ReadFile.createReviews(getServletContext(), filepath);
 		//doGet(request, response);
 	}
 
