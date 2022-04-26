@@ -59,12 +59,14 @@ public class UtilDBGamereview {
       return resultList;
    }
 
-   public static List<GameReview> listEntries(String title, String author, String genres, int score) {
+   public static List<GameReview> listEntries(String title, String author, List<String> genres, int score) {
       List<GameReview> resultList = new ArrayList<GameReview>();
 
       Session session = getSessionFactory().openSession();
       Transaction tx = null;
-
+      if(title == null && author == null && genres.size() == 0 && score == -1) {
+    	  return listEntries();
+      }
       try {
          tx = session.beginTransaction();
          System.out.println((GameReview)session.get(GameReview.class, 1)); // use "get" to fetch data
@@ -72,8 +74,12 @@ public class UtilDBGamereview {
          List<?> reviews = session.createQuery("FROM GameReview").list();
          for (Iterator<?> iterator = reviews.iterator(); iterator.hasNext();) {
             GameReview review = (GameReview) iterator.next();
-           if(review.getTitle().equalsIgnoreCase(title) || review.getAuthor().equalsIgnoreCase(author) || review.getGenres().equalsIgnoreCase(genres) || review.getScore().intValue() == score) {
-        	   resultList.add(review);
+           if(review.getTitle().equalsIgnoreCase(title) || review.getAuthor().equalsIgnoreCase(author) || review.getScore().intValue() == score) {
+        	   //for(int i = 0; i < genres.size(); i++) {
+        		 //  if(review.getGenres().indexOf(genres.get(i)) != -1) {
+        			   resultList.add(review);
+        		   //}
+        	   //}
            }
          }
          tx.commit();

@@ -68,7 +68,7 @@
 		</div>
 	</nav><br><br><br><br>
 		<div class="div-table">
-		<div class="div-table-col" align=left style="background:#23463f; margin-left:-8; box-shadow:0px 5px 3px #aaaaaa;">
+		<div class="div-table-col" align=left style="background:#23463f; margin-left:-8; box-shadow:0px 5px 3px #aaaaaa; position:sticky; top:0;">
 		<p style="color:black;">Current Search: ${requestScope["search"]}</p><br><br>
 		<form action="Homepage" method="post">
 			<label for="gameName">Game Title:</label><br>
@@ -104,10 +104,11 @@
 			<input type="reset" value="Reset">
 		</form>
 	</div>
-	<div class="div-table-col">
+	<div class="div-table-col" align = left>
 		<div class="search">
 		<h1>Search results:</h1>
 			${requestScope["output"]}
+	</div>
 	</div>
 	</div>
 </body>
