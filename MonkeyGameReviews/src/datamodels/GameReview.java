@@ -1,5 +1,7 @@
 package datamodels;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -41,7 +43,7 @@ public class GameReview {
 	@Column(name = "BODY")
 	private String body;
 	
-	public GameReview(Integer id, String title, String author, String[] genres, Integer score, String body) {
+	public GameReview(Integer id, String title, String author, List<String> genres, Integer score, String body) {
 		this.id = id;
 		this.title = title;
 		this.author = author;
@@ -50,7 +52,7 @@ public class GameReview {
 		this.body = body;
 	}
 	
-	public GameReview(String title, String author, String[] genres, Integer score, String body) {
+	public GameReview(String title, String author, List<String> genres, Integer score, String body) {
 			this.title = title;
 			this.author = author;
 			setGenres(genres);
@@ -68,14 +70,12 @@ public class GameReview {
 		this.author = author;
 	}
 	
-	public void setGenres(String[] genres) {
+	public void setGenres(List<String> genres) {
 		String result = "";
-		for(int i = 0; i < genres.length; i++) {
-			result += genres[i];
-			if(i != genres.length - 1) {
-					result += ".";
-				}
-			}
+		for(int i = 0; i < genres.size(); i++) {
+			result += genres.get(i);
+			result += ".";
+		}
 		this.genres = result;
 	}
 	

@@ -87,7 +87,7 @@ public class UtilDBGamereview {
       return resultList;
    }
 
-   public static void createEntries(String title, String author, String[] genres, int score, String review) {
+   public static void createEntries(String title, String author, List<String> genres, int score, String review) {
       Session session = getSessionFactory().openSession();
       Transaction tx = null;
       try {

@@ -70,7 +70,7 @@
 		<div class="div-table">
 		<div class="div-table-col" align=left style="background:#23463f; margin-left:-8; box-shadow:0px 5px 3px #aaaaaa;">
 		<p style="color:black;">Current Search: ${requestScope["search"]}</p><br><br>
-		<form>
+		<form action="Homepage" method="post">
 			<label for="gameName">Game Title:</label><br>
 			<input type="text" id="gameName" name="gameName"><br><br>
 			<label for="author">Author:</label><br>
@@ -90,16 +90,16 @@
 			<div class="grid"><input type="checkbox" id="genre6" name="genre6" value="Sports & Racing">
 			<label for="genre6">Sports & Racing</label></div><br><br>
 			<p>Rating:</p>
-			<div class="grid"><input type="radio" id="1star" name="rad" value="1">
-			<label for="1star">1 star</label></div>
-			<div class="grid"><input type="radio" id="2star" name="rad" value="2">
-			<label for="2star">2 stars</label></div>
-			<div class="grid"><input type="radio" id="3star" name="rad" value="3">
-			<label for="3star">3 stars</label></div><br>
-			<div class="grid"><input type="radio" id="4star" name="rad" value="4">
-			<label for="4star">4 stars</label></div>
-			<div class="grid"><input type="radio" id="5star" name="rad" value="5">
-			<label for="5star">5 stars</label></div><br><br>
+			<div class="grid"><input type="radio" id="rad" name="rad" value="1">
+			<label>1 star</label></div>
+			<div class="grid"><input type="radio" id="rad" name="rad" value="2">
+			<label>2 stars</label></div>
+			<div class="grid"><input type="radio" id="rad" name="rad" value="3">
+			<label>3 stars</label></div><br>
+			<div class="grid"><input type="radio" id="rad" name="rad" value="4">
+			<label>4 stars</label></div>
+			<div class="grid"><input type="radio" id="rad" name="rad" value="5">
+			<label>5 stars</label></div><br><br>
 			<input type="submit" value="Submit">
 			<input type="reset" value="Reset">
 		</form>
