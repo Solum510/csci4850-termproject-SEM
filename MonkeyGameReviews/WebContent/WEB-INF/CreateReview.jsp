@@ -31,6 +31,9 @@
 		.grid{
 			display:inline-block;
 		}
+		label{
+		color:#08ffd1
+		}
 	</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Monkey Game Reviews - Create Review</title>

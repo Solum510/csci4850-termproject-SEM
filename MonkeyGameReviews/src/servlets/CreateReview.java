@@ -19,7 +19,7 @@ import util.ReadFile;
 public class CreateReview extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private String redirect = "<p>You must be logged in to create a review. Please <a href=\"Login\">login.</a></p>";
-	private String norm = "<form action=CreateReview method=post>\r\n" + 
+	private String norm = "<form action=CreateReview method=post><div  align=center style=\"background:#23463f; width:640px; border-radius:15px\">\r\n" + 
 			"	       <label for=\"gameName\">Game Title:</label><br>\r\n" + 
 			"			<input type=\"text\" id=\"gameName\" name=\"gameName\"><br><br>\r\n" + 
 			"			<label for=\"gameName\">Genres:</label><br>\r\n" + 
@@ -36,7 +36,7 @@ public class CreateReview extends HttpServlet {
 			"			<label for=\"genre5\">Simulation</label></div><br>\r\n" + 
 			"			<div class=\"grid\"><input type=\"checkbox\" id=\"genre6\" name=\"genre6\" value=\"Sports & Racing\">\r\n" + 
 			"			<label for=\"genre6\">Sports & Racing</label></div><br><br>\r\n" + 
-			"			<p>Rating:</p>\r\n" + 
+			"			<p style=\"color:#08ffd1;\">Rating:</p>\r\n" + 
 			"			<div class=\"grid\"><input type=\"radio\" id=\"1star\" name=\"rad\" value=\"1\">\r\n" + 
 			"			<label for=\"1star\">1 star</label></div>\r\n" + 
 			"			<div class=\"grid\"><input type=\"radio\" id=\"2star\" name=\"rad\" value=\"2\">\r\n" + 
@@ -49,8 +49,8 @@ public class CreateReview extends HttpServlet {
 			"			<label for=\"5star\">5 stars</label></div><br><br>\r\n" + 
 			"			<label for=\"review\">Review:</label><div></div>\r\n" + 
 			"			<textarea rows=\"5\" cols=\"60\" name=\"review\" id=\"review\"></textarea><br><br>\r\n" + 
-			"			<input type=\"submit\" value=\"Create Review\">\r\n" + 
-			"	   </form>";
+			"			<input type=\"submit\" value=\"Create Review\" style=\"border-radius:5px\"><br>\r\n" + 
+			"	   </div></form>";
        
     /**
      * @see HttpServlet#HttpServlet()
