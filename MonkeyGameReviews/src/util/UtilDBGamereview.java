@@ -64,8 +64,9 @@ public class UtilDBGamereview {
 
       Session session = getSessionFactory().openSession();
       Transaction tx = null;
+      boolean empty = false;
       if(title == null && author == null && genres.size() == 0 && score == -1) {
-    	  return listEntries();
+    	  empty = true;
       }
       try {
          tx = session.beginTransaction();
@@ -74,7 +75,7 @@ public class UtilDBGamereview {
          List<?> reviews = session.createQuery("FROM GameReview").list();
          for (Iterator<?> iterator = reviews.iterator(); iterator.hasNext();) {
             GameReview review = (GameReview) iterator.next();
-           if(review.getTitle().equalsIgnoreCase(title) || review.getAuthor().equalsIgnoreCase(author) || review.getScore().intValue() == score) {
+           if(review.getTitle().equalsIgnoreCase(title) || review.getAuthor().equalsIgnoreCase(author) || review.getScore().intValue() == score || checkGenres(review, genres) || empty) {
         	   //for(int i = 0; i < genres.size(); i++) {
         		 //  if(review.getGenres().indexOf(genres.get(i)) != -1) {
         			   resultList.add(review);
@@ -92,7 +93,23 @@ public class UtilDBGamereview {
       }
       return resultList;
    }
-
+   
+   public static boolean checkGenres(GameReview review, List<String> genres) {
+	 int count = 0;
+	 if(genres.size() == 0) {
+		 return false;
+	 }
+	 for(int i = 0; i < genres.size(); i++) {
+		   if(review.getGenres().contains(genres.get(i))) {
+			   count++;
+		   }
+	   }
+	 	if(count == genres.size()) {
+	 		return true;
+	 	}
+	 return false;
+   }
+   
    public static void createEntries(String title, String author, String genres, int score, String review) {
       Session session = getSessionFactory().openSession();
       Transaction tx = null;
