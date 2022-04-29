@@ -68,25 +68,6 @@
 			<button onclick="window.location.href='UserProfile'" style="height:50px;">User Profile</button>
 		</div>
 	</nav><br><br><br><br>
-	<div class="div-table" align=center>
-		<div class="div-table-col" align=left style="background:#23463f; margin-left:-13; box-shadow:0px 5px 3px #aaaaaa;">
-			<br>
-			<div class="grid">
-				<img src="profile-circle.png" width=72px height=72px align=left>
-			</div>
-			<p align=left>Username - ${requestScope["username"]}</p>
-			<form method="post">
-				<input type="submit" value="logout">
-			</form>
-		</div>
-		<div class="grid">
-		<div class="div-table-col">
-		<div class="search">
-			<h1>${requestScope["username"]}'s reviews:</h1>
-				${requestScope["reviews"]}
-		</div>
-		</div>
-	</div>
-	</div>
+	<div align=center><p>You must be logged in to see your profile. Please <a href="Login">login.</a></p></div>
 </body>
 </html>
