@@ -54,6 +54,7 @@
 	width: auto;
 	border: 3px groove #00a36a;
 	box-shadow:0px 5px 3px #aaaaaa;
+	border-radius: 15px;
 }
 	</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
