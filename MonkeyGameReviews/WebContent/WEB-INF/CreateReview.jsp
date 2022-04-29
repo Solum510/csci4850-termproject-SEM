@@ -37,6 +37,10 @@
 	</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Monkey Game Reviews - Create Review</title>
+<%
+	final String title = (String) request.getAttribute("gameName");
+	final String review = (String) request.getAttribute("review");
+%>
 </head>
 <body>	
     
@@ -50,6 +54,8 @@
 	</nav><br><br><br><br><br><br>
 		<div align=center>
 	   		${requestScope["output"]}
+	   		${requestScope["error"]}
+	   		
 	   </div>
 	   <!--<p>${requestScope["review"]}</p>-->
 </body>
