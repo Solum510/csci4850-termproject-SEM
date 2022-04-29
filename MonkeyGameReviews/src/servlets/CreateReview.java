@@ -1,6 +1,8 @@
 package servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import datamodels.GameReview;
 import datamodels.User;
 import util.ReadFile;
 import util.UtilDBGamereview;
@@ -98,6 +101,7 @@ public class CreateReview extends HttpServlet {
 		String genre5 =  request.getParameter("genre5");
 		String genre6 =  request.getParameter("genre6");
 		String genreString = "";
+		List<String> genres = new ArrayList<String>();
 		String score= request.getParameter("rad"); //rad
 		int scoreNum = Integer.parseInt(score);
 		String review = request.getParameter("review"); //review
@@ -116,11 +120,20 @@ public class CreateReview extends HttpServlet {
 			genreString += checkGenre(genre4);
 			genreString += checkGenre(genre5);
 			genreString += checkGenre(genre6);
+			addGenre(genre1, genres);
+			addGenre(genre2, genres);
+			addGenre(genre3, genres);
+			addGenre(genre4, genres);
+			addGenre(genre5, genres);
+			addGenre(genre6, genres);
 			HttpSession session = request.getSession();
 			User user= (User) session.getAttribute("user");
 			String author = user.getUsername();
 			UtilDBGamereview.createEntries(title, author, genreString, scoreNum, review);
-			request.setAttribute(output, UtilDBGamereview.listEntries(title, author, , scoreNum).get(0).toHtml());
+			List<GameReview> reviews = UtilDBGamereview.listEntries(title, author, genres, scoreNum);
+			request.setAttribute("output", reviews.get(reviews.size() - 1).toHtml());
+			RequestDispatcher view = request.getRequestDispatcher("WEB-INF/Homepage.jsp");
+			view.forward(request, response);
 		}
 	}
 	
@@ -130,5 +143,11 @@ public class CreateReview extends HttpServlet {
 			return genre + ".";
 		}
 		return "";
+	}
+	
+	private void addGenre(String genre, List<String> genres) {
+		if(genre != null) {
+			genres.add(genre);
+		}
 	}
 }

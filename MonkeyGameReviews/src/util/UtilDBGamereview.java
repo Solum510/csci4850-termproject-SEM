@@ -80,9 +80,9 @@ public class UtilDBGamereview {
         		 //  if(review.getGenres().indexOf(genres.get(i)) != -1) {
         			   resultList.add(review);
         		   //}
-        	   //}
+        	   }
            }
-         }
+           
          tx.commit();
       } catch (HibernateException e) {
          if (tx != null)
@@ -108,6 +108,9 @@ public class UtilDBGamereview {
 	 		return true;
 	 	}
 	 return false;
+   }
+   public static boolean checkString(String compare, String to) {
+	   return compare.equalsIgnoreCase(to);
    }
    
    public static void createEntries(String title, String author, String genres, int score, String review) {
